@@ -42,6 +42,22 @@ opendemo() {
     return;
   fi
 
+  # delete a demo directory
+  deleteDemoDir() {
+    if ( test -d $demosdir/$1 ) then
+      if read -qs -t 30 "?>> Are you sure to delete demo '$1'? [Y/n]"$'\n'; then
+        rm -rf $demosdir/$1;
+        print -P "%F{green}Directory $demosdir/$1 was successfully deleted.%f";
+      fi
+    else
+      print -P "%F{red} demo '$1' does not exist";
+    fi
+  }
+  if ( test -n $1 ) && ( test "$1" = "-r" ) && ( test -n $2 ); then
+    deleteDemoDir $2;
+    return;
+  fi
+
   # Get all the demo names in $demosdir,
   # Push into alldemos
   updateAllDemos() {
