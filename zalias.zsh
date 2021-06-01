@@ -15,12 +15,15 @@ alias nginxconfig="code -r '/usr/local/etc/nginx/servers/glorystudio.conf'"
 alias hosts="code -r '/etc/hosts'"
 
 alias zshrcconfig="code -r ~/.zshrc"
-alias zaliasconfig="code -r $ZSH_CUSTOM/zalias.zsh"
-alias srczshrc="source ~/.zshrc"
+alias zshaliasconfig="code -r $ZSH_CUSTOM/zalias.zsh"
+alias zshsource="source ~/.zshrc"
 
 alias mongostart="brew services start mongodb-community"
 alias mongorestart="brew services restart mongodb-community"
 alias mongostop="brew services stop mongodb-community"
+
+alias pm2start="pm2 start ~/Public/pm2/ecosystem.config.js"
+alias pm2stop="pm2 stop ~/Public/pm2/ecosystem.config.js"
 
 opendemo() {
   local demosdir=$demos; # variable 'demos' is a global shortcut refered to demos directory
