@@ -4,8 +4,6 @@
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
-alias code="code-insiders"
-
 alias nginxstart="nginx"
 alias nginxreload="nginx -s reload"
 alias nginxstop="nginx -s stop"
@@ -24,6 +22,8 @@ alias mongostop="brew services stop mongodb-community"
 
 alias pm2start="pm2 start ~/Public/pm2/ecosystem.config.js"
 alias pm2stop="pm2 stop ~/Public/pm2/ecosystem.config.js"
+
+alias rm="trash"
 
 opendemo() {
   local demosdir=$demos; # variable 'demos' is a global shortcut refered to demos directory
